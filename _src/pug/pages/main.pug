@@ -1,0 +1,83 @@
+extends ../layouts/main.pug
+
+block config
+    - var pageTitle = "Главная";
+
+block content
+    section.menu
+        .container
+            .menu__list
+                .menu__list__item 
+                    a(href="#").menu__list__link SEARCH TICKETS
+                .menu__list__item
+                    a(href="#").menu__list__link SAPSAN
+                .menu__list__item
+                    a(href="#").menu__list__link ALLEGRO
+                .menu__list__item
+                    a(href="#").menu__list__link.menu__list__link-triangle TRANS-SIBERIAN
+                    .menu__sub
+                        a(href="#").menu__sub__link Group travel
+                        a(href="#").menu__sub__link Ticket types
+                        a(href="#").menu__sub__link Child policy
+                .menu__list__item
+                    a(href="#").menu__list__link.menu__list__link-triangle FAQ
+                    .menu__sub
+                        a(href="#").menu__sub__link Group travel
+                        a(href="#").menu__sub__link Ticket types
+                        a(href="#").menu__sub__link Child policy
+                .menu__list__item
+                    a(href="#").menu__list__link.menu__list__link-triangle TICKETS GUIDE
+                    .menu__sub
+                        a(href="#").menu__sub__link Group travel
+                        a(href="#").menu__sub__link Ticket types
+                        a(href="#").menu__sub__link Child policy
+                .menu__list__item
+                    a(href="#").menu__list__link.menu__list__link-triangle CONTACT US
+                    .menu__sub
+                        a(href="#").menu__sub__link Group travel
+                        a(href="#").menu__sub__link Ticket types
+                        a(href="#").menu__sub__link Child policy
+
+            a(href="#").menu__sign
+                .menu__sign__text Sign in
+
+
+    section.tickets
+        .container
+            .tickets__headline Russian Train Tickets
+            form.tickets__form
+                .tickets__row
+                    .tickets__col.tickets__col-city
+                        .tickets__title Departure city:
+                        input(type='text' placeholder='Type city name').tickets__input
+                        .tickets__ex Ex: <a href="#">St. Petersburg</a>, <a href="#">Moscow</a>
+                    .tickets__arrows
+                    .tickets__col.tickets__col-city
+                        .tickets__title Arrival city:
+                        input(type='text' placeholder='Type city name').tickets__input
+                        .tickets__ex Ex: <a href="#">St. Petersburg</a>, <a href="#">Moscow</a>
+
+                .tickets__row.tickets__row-align_bottom
+                    .tickets__col.tickets__date
+                        .tickets__title Departure date:
+                        input(type='text' placeholder='dd.mm.yyyy').tickets__input.tickets__input-date
+                    .tickets__col.tickets__return
+                        .tickets__return__item
+                            .tickets__round
+                                label
+                                    .tickets__checkbox
+                                        input(type='checkbox').tickets__checkbox__input
+                                        .tickets__checkbox__icon
+                                    | Roundtrip
+
+                        .tickets__return__item
+                            .tickets__title Return date:
+                            input(type='text' placeholder='dd.mm.yyyy' disabled).tickets__input.tickets__input-date
+                    .tickets__col.tickets__curr
+                        .tickets__title Currency
+                        select.tickets__select
+                            option RUB
+                            option RUB
+                            option RUB
+
+                    button.tickets__search Search
